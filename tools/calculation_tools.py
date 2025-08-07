@@ -28,7 +28,7 @@ def calculate_bmi(weight: float, height: float) -> str:
     return f"Tu IMC es {bmi}, lo que se clasifica como: {classification}."
 
 @tool
-def calculate_bmr(weight: float, height: float, age: int, gender: str) -> float:
+def calculate_bmr(weight: float, height: float, age: int, gender: str) -> str:
     """
     Calculates the Basal Metabolic Rate (BMR) using the Mifflin-St Jeor formula.
 
@@ -39,7 +39,7 @@ def calculate_bmr(weight: float, height: float, age: int, gender: str) -> float:
         gender (str): Gender, either 'hombre' (male) or 'mujer' (female).
 
     Returns:
-        float: The calculated Basal Metabolic Rate (BMR).
+        str: The calculated Basal Metabolic Rate (BMR) as a string.
     """
     if gender.lower() == 'hombre':
         bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
@@ -48,7 +48,7 @@ def calculate_bmr(weight: float, height: float, age: int, gender: str) -> float:
     else:
         raise ValueError("El género debe ser 'hombre' o 'mujer'.")
     
-    return round(bmr, 2)
+    return str(round(bmr, 2))
 
 @tool
 def calculate_macros(bmr: float, activity_level: str, goal: str) -> str:
