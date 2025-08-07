@@ -1,5 +1,5 @@
 
-# Agente de Nutrición con IA 
+# Agente de Nutrición con IA y langchain
 
 Un agente conversacional que interactúa con el usuario para recopilar datos, realizar cálculos y generar un plan de bienestar integral (nutrición y ejercicio).
 
